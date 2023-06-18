@@ -31,7 +31,7 @@ const married = true;
 let pet;
 let badHabbits = null;
 
-console.log(typeof(myFirstName), typeof(mySecondName), typeof(myGroup), typeof(birthYear), typeof(married), typeof(pet),typeof(badHabbits));
+console.log(typeof(birthYear), typeof(married), typeof(myFirstName),typeof(mySecondName), typeof(myGroup), typeof(pet),typeof(badHabbits));
 
 //7
 let login = prompt(`Type your login`);
