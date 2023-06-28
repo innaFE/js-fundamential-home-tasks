@@ -36,3 +36,44 @@ function randArray(k){
 }
 
 console.log(randArray(7))
+
+//4
+function compact(arr) {
+    const newArr = [];
+    for(i=0; i < arr.length; i++){
+        if(!newArr.includes(arr[i])){
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr
+}
+const arr = [5, 3, 4, 5,6,7,3];
+const arr2 = compact(arr);
+console.log(arr2);
+
+//5
+
+
+
+function sortedArray (arr3) {
+    let numbersArray = [];
+    let stringArray = [];
+
+    for(i  = 0; i < arr3.length; i++){
+        if(Array.isArray(arr3[i])){
+            let nestedArrays = sortedArray([i]);
+            numbersArray = numbersArray.concat(nestedArrays[0]);
+            stringArray = stringArray.concat(nestedArrays[1]);
+        } else if(typeof arr3[i] === "number"){
+            numbersArray.push(arr3[i])
+        }else if (typeof arr3[i] === "string"){
+            numbersArray.push(arr3[i]);
+        }
+    }
+    return [numbersArray, stringArray]
+} 
+
+let  arr3 = [5, 'Limit', 12, 'a', '3', 99, 2, [2, 4, 3, '33', 'a', 'text'], 'strong', 'broun'];
+let arrNew = sortedArray(arr3);
+
+console.log(arrNew)
