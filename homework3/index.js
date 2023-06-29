@@ -76,3 +76,46 @@ function sortedArray(arr3) {
   let arrNew = sortedArray(arr3);
   
   console.log(arrNew);
+
+  //6
+  function calc(a, b, op) {
+    let result;
+  
+    switch (op) {
+      case 1:
+        result = a - b;
+        break;
+      case 2:
+        result = a * b;
+        break;
+      case 3:
+        result = a / b;
+        break;
+      default:
+        result = a + b;
+        break;
+    }
+  
+    return result;
+  }
+  
+  console.log(calc(10, 3, 1));
+
+ //7
+ function findUnique(arr){
+    const counter = {};
+    for (let i = 0; i<arr.length; i++){
+        const element = arr[i];
+        counter[element] = (counter[element] || 0 ) + 1
+    if (counter[element] > 1){
+        return false
+    }
+    }
+return true;
+ }
+ console.log(findUnique([1, 2, 3, 5, 3]));
+ console.log(findUnique([1, 2, 3, 5, 11]))
+
+
+
+
